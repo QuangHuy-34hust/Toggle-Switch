@@ -1,0 +1,53 @@
+.check-box{
+	display: flex;
+}
+.big-check{
+	display: block;
+	width:150px;
+	height:50px;
+	background-color: #737373;
+	border-radius:25px;
+	position: relative;
+}
+.tick-check{
+	display: block;
+    width: 30px;
+    height: 15px;
+    background-color: transparent;
+    border: 4px solid white;
+    border-top: none;
+    border-right: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotate(-45deg);
+}
+.switch{
+	display: block;
+	width:47px;
+	height:47px;
+	border-radius:50%;
+	background-color: #ffffff;
+	position: absolute;
+	top:1.5px;
+	left:1px;
+	transform:translateX(0);
+	transition: .3s;
+}
+input:checked + .big-check >.switch{
+	transform: translateX(101px);
+	transition:.6s;
+}
+input:checked +span{
+	background-color: #00BC77;
+}
+.close-check{
+    position: absolute;
+    font-size: 40px;
+    right: 10px;
+    bottom: 0;
+    transform: rotate(45deg);
+}
+label >input{
+	display: none;
+}
